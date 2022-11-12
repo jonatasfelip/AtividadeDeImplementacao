@@ -51,4 +51,5 @@ elif (opc == 4):
 else:
     print("Informe uma opção válida!")
 
-    #Parte de Áurea: Criar um arquivo para a documentação
+
+#Parte de Áurea: Criar um arquivo para a documentação
