@@ -28,3 +28,27 @@ class Calculadora:
         """Método de multiplicar que recebe dois números e retorna a multiplicação deles"""
         multiplicar = num1 * num2
         return multiplicar
+
+    def Dividir(num1, num2): 
+        """Método de dividir que recebe dois números e retorna a divisão deles"""
+        dividir = num1 + num2
+        return dividir
+
+    #Parte de Áurea: Implementar o método da documentação
+    
+if (opc == 1):
+    print(num1, " + ", num2, " = ", Calculadora.Somar(num1, num2))
+
+elif (opc == 2):
+    print(num1, " - ", num2, " = ", Calculadora.Subtrair(num1, num2))
+
+elif (opc == 3):
+    print(num1, " * ", num2, " = ", Calculadora.Multiplicar(num1, num2))
+
+elif (opc == 4):
+    print(num1, " / ", num2, " = ", Calculadora.Dividir(num1, num2))
+
+else:
+    print("Informe uma opção válida!")
+
+    #Parte de Áurea: Criar um arquivo para a documentação
