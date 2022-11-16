@@ -34,7 +34,11 @@ class Calculadora:
         dividir = num1 + num2
         return dividir
 
-    #Parte de Áurea: Implementar o método da documentação
+    def Documentacao():
+        documentacao = Calculadora.__doc__, Calculadora.Somar.__doc__,
+        Calculadora.Subtrair.__doc__, Calculadora.Multiplicar.__doc__ ,
+        Calculadora.Dividir.__doc__
+        return documentacao
     
 if (opc == 1):
     print(num1, " + ", num2, " = ", Calculadora.Somar(num1, num2))
@@ -52,4 +56,3 @@ else:
     print("Informe uma opção válida!")
 
 
-#Parte de Áurea: Criar um arquivo para a documentação
