@@ -1,3 +1,4 @@
+import unittest
 menu = """
 1...............Somar
 2...............Subtrair
@@ -7,10 +8,10 @@ menu = """
 
 print(menu)
 
-opc = int(input("Informe uma operação: "))
+#opc = int(input("Informe uma operação: "))
 
-num1 = int(input("Informe um número: "))
-num2 = int(input("Informe outro número: "))
+#num1 = int(input("Informe um número: "))
+#num2 = int(input("Informe outro número: "))
 
 class Calculadora: 
     """Classe calculadora que engloba métodos respectivos às operações: somar, subtrair, multiplicar e dividir"""
@@ -31,7 +32,7 @@ class Calculadora:
 
     def Dividir(num1, num2): 
         """Método de dividir que recebe dois números e retorna a divisão deles"""
-        dividir = num1 + num2
+        dividir = num1 / num2
         return dividir
 
     def Documentacao():
@@ -39,8 +40,21 @@ class Calculadora:
         Calculadora.Subtrair.__doc__, Calculadora.Multiplicar.__doc__ ,
         Calculadora.Dividir.__doc__
         return documentacao
-    
-if (opc == 1):
+
+class Teste(unittest.TestCase):
+    def teste_soma(self):
+        self.assertEqual(Calculadora.Somar(4,2),6)
+
+    def teste_subtrair(self):
+        self.assertEqual(Calculadora.Subtrair(8,1),7)
+
+    def teste_multiplicar(self):
+        self.assertEqual(Calculadora.Multiplicar(9,9),81)
+
+    def teste_dividir(self):
+        self.assertEqual(Calculadora.Dividir(125,5),25)
+
+'''if (opc == 1):
     print(num1, " + ", num2, " = ", Calculadora.Somar(num1, num2))
 
 elif (opc == 2):
@@ -54,5 +68,10 @@ elif (opc == 4):
 
 else:
     print("Informe uma opção válida!")
+'''
+
+if __name__ == '__main__':
+    unittest.main()
+
 
 
