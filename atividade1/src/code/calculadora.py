@@ -8,10 +8,10 @@ menu = """
 
 print(menu)
 
-#opc = int(input("Informe uma operação: "))
+opc = int(input("Informe uma operação:"))
 
-#num1 = int(input("Informe um número: "))
-#num2 = int(input("Informe outro número: "))
+num1 = int(input("Informe um número: "))
+num2 = int(input("Informe outro número: "))
 
 class Calculadora: 
     """Classe calculadora que engloba métodos respectivos às operações: somar, subtrair, multiplicar e dividir"""
@@ -54,7 +54,7 @@ class Teste(unittest.TestCase):
     def teste_dividir(self):
         self.assertEqual(Calculadora.Dividir(125,5),25)
 
-'''if (opc == 1):
+if (opc == 1):
     print(num1, " + ", num2, " = ", Calculadora.Somar(num1, num2))
 
 elif (opc == 2):
@@ -68,7 +68,6 @@ elif (opc == 4):
 
 else:
     print("Informe uma opção válida!")
-'''
 
 if __name__ == '__main__':
     unittest.main()
